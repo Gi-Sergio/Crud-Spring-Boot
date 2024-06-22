@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Registro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script th:src="@{/js/tailwind.config.js}"></script><!--    se utiliza para especificar la ubicación de la fuente de un recurso externo-->
+    <style>
+        body {
+            background-image: url("https://res.cloudinary.com/drycsmapp/image/upload/v1717679382/jaehm2gk15l4ybcq9p7w.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body w-full h-[100vh] flex justify-center items-center>
+<section class="w-full h-full flex-1 flex justify-center items-center">
+    <img src="https://res.cloudinary.com/drycsmapp/image/upload/v1717675223/pdyetvdcam2dh3pklj2l.png" alt="" class="w-[20%] h-[35%] mx-auto">
+    <h1 class="text-zinc-1000 font-bold text-7xl flex justify-center">Editar Registro</h1>
+    <form th:action="@{/registro/update/{id}(id=${registro.id})}" th:object="${registro}" method="post" class="w-[60%] h-[65%] flex flex-col justify-evenly p-10 bg-zinc-200 rounded-2xl shadow-2xl">
+        <!--th:object facilita la vinculación automática de los datos del formulario con un objeto de modelo. Esto permite que los datos del formulario se conviertan fácilmente en propiedades del objeto del modelo sin necesidad de código adicional para la conversión.-->
+        <input type="hidden" th:field="*{id}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <br/>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" th:field="*{apellido}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <br/>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" th:field="*{correo}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <br/>
+        <label for="password">Paaword:</label>
+        <input type="text" id="password" th:field="*{password}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <br/>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" th:field="*{descripcion}" class="rounded-md border-solid border-b-2 border-blue-700 p-2 outline-none focus:border-red-400 ease-in duration-300 placeholder:text-center">
+        <br />
+        <button type="submit" class="w-[70%] h-[10%] bg-blue-700 rounded-xl hover:bg-blue-400 ease-in duration-300 text-white mx-auto shadow-2xl">Guardar</button>
+    </form>
+</section>
+</body>
+</html>

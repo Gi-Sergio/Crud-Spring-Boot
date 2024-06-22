@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+}
+
+body{
+  background-color: rgba(255, 234, 180, 0.5);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  height: 70px;
+  background-color: navy;
+  box-sizing: border-box;
+  box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+  padding: 0 20px;
+}
+
+.navigation h1 {
+  margin: 0; 
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1100ff;
+  background-image: -webkit-linear-gradient(0deg,
+      #4d40ff 0%,
+      #466e85 46%,
+      #ff0055 86%);
+  background-clip: text;
+  text-emphasis-color: transparent;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+}
+
+.navigation ul li {
+  margin-left: 5px;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navigation ul li a {
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.navigation ul li a:hover {
+  background-color: #a581ff5b;
+  box-shadow: 0px 0px 400px 86px #a581ff5b;
+}
+
+table {
+  width: 50%;
+  margin: 10% auto;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #800080;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+th {
+  font-size: 18px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(3) {
+  background-color: #fffaa0;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+footer{
+  background-color: navy;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  box-shadow: -17px 0px 59px 11px rgba(63, 0, 199, 0.62);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #f9f9f9;
+}
+
+.footer-social{
+  display: inline;
+}
